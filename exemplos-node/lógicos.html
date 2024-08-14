@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógicos</title>
+    <style>
+        body{
+            background-color: lightgoldenrodyellow;
+            font-size: 20px;
+            color: rgb(79, 87, 197);
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        //"! - Negação" 
+        //"&& - Conjunção"
+        //"|| - Disjunção"
+        var a = 5
+        var b = 2
+        var idade = a+b
+
+        var estado = 'MG'
+
+        var conjunção = idade>=15 && idade<=17 // tem que dar false (&& tem que dar dois true)
+        var disjunção = estado == 'RJ' || estado == 'SP' // tem que dar falso (porque o estado é MG pelo meno um tem que ser true)
+        var salario = 1.500
+        var sexo = 'F'
+
+        var negação = salario >=1.500 && sexo !='M' // tem que dar True (ambos valores verdadeiros)
+
+        document.write(`idade>=15 && idade<=17 - ${conjunção} <br>`)
+        document.write(`estado == 'RJ' || estado == 'SP' - ${disjunção} <br>`)
+        document.write(`var negação = salario >=1.500 && sexo !='M' - ${negação}`)
+    </script>
+</body>
+</html>
