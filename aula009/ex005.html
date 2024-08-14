@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando estudos com o DOM</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: rgb(126, 124, 124);
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dom (Document Object Model)</h1>
+    <p id='resultado'>Aqui vai o resultado</p>
+    <p>Aprendendo o <strong>DOM.</strong></p>
+    <p class="clase"> esse é com clase</p>
+    <div  name='clique'>Clique em mim</div>
+    <script>
+
+        //variaveis
+        var p1 = window.document.getElementsByTagName('p')[1] // variavel para pegar elementos da tag p (ou tag escolhida)
+
+        var id = window.document.getElementById('resultado') // para pegar da tag id 
+
+        var nome = window.document.getElementsByName('clique')[0] // pegando pela tag name
+
+        var clase = window.document.getElementsByClassName('clase')[0]
+
+        var seletor = window.document.querySelector('p#resultado')
+
+        //style
+        id.innerText = 'Estou aguardando' // mudando o id 
+
+        p1.style.color='black' // mudando a cor da letra 
+
+        nome.style.background = 'black' // mudandmo a cor de fundo da div name = 'clique '
+
+        clase.style.background = 'yellow' // colocando o fundo em amarelo
+
+        seletor.style.background ='green' // deixando o fundo verde
+
+
+        //Escrita na tela
+        window.document.write(`está escrito: ${p1.innerHTML} <br>`) // mostrando o que está escrito na tag p dentro da tela com alterações do HTML
+
+        window.document.write(`${p1.innerText} <br>` ) // apenas o textto escrito sem formatação 
+
+
+        window.document.write(`${id.innerText}<br>` ) // id sem formatação
+
+        window.document.write(`dentro do charset ${window.document.charset}` ) // mostrando o charset
+
+        window.document.write(`Esse é com nome: ${nome.innerText} <br>`) // escrevendo na tela o name da div 
+
+        window.document.write(`Oque está dentro do  ClassName ${clase.innerText} <br>`) // escrevendo oque está dentro do ClassName 
+
+        window.document.write(`Dentro do seletor ${seletor.innerText} <br>`)
+
+    </script>
+</body>
+</html>
