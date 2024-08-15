@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico de soma</title>
+    <style>
+        body{
+            background-color: lightsteelblue;
+        }
+        main{
+            font: bolder 16pt arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Somando valores</h1>
+        <p>Vamos somar</p>
+        <input type="number" name="numero1" id="numero1" placeholder="Digite um número">
+        <input type="number" name="numero2" id="numero2" placeholder="Digite outro número">
+        <input type="button" value="Somar" onclick="somando()">
+        <div id="resultado">
+            Resultado
+        </div>
+    </main>
+
+    <script>
+        function somando(){
+            var txt1 = (window.document.getElementById("numero1"))
+            var txt2 = (window.document.getElementById('numero2'))
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var resultado = window.document.getElementById("resultado")
+            var soma = n1+n2
+            resultado.innerHTML = `A soma entre os nmeros ${n1} + ${n2} é  = ${soma}`
+            resultado.style.color = 'red'
+        }
+    </script>
+</body>
+</html>
