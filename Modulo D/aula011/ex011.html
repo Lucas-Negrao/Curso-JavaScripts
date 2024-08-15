@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Digite abaixo seu pais</p>
+    <input type="text" name="paises" id="paises">
+    <input type="button" value="Enviar" onclick="enviado()">
+    <div id="resposta">
+        Nacionalidade
+    </div>
+
+    <script>
+       function enviado(){
+            var brasil = "BRASIL"
+            var pais = window.document.getElementById('paises') 
+            var res = window.document.getElementById('resposta')
+            res.innerText = (`Você é do ${pais}`)
+            if (pais != brasil){
+                res.innerText += ('Bem vindo ao Brasil')
+            }
+
+            else{
+                res.innerText += ('Você é Brasileiro')
+            }
+       }
+        
+    </script>
+</body>
+</html>

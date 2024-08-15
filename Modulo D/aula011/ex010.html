@@ -19,7 +19,7 @@
             var pista = 80
             var txtvel = window.document.getElementById('velocidade')
             var resultado = window.document.getElementById('res')
-            var vel = Number(txtvel.value)
+            var vel = Number(txtvel.value)      
             resultado.innerHTML = (`<p>Sua velocidade é: <strong>${vel} Km/h</strong></p>`)
             if (vel>pista){
                 resultado.innerHTML += (`Você foi multado!`)
