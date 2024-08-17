@@ -4,28 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pais</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: lightslategray;
+        }
+
+        main{
+            background-color: rgb(5, 165, 5);
+            width: 500px;
+            height: 500px;
+            font: normal 18px arial;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
+            padding: 20px;
+            text-align: center;
+        }
+        main>h1 {
+            color: rgb(7, 72, 170);
+        }
+
+        main>p, div{    
+            color: yellow;
+            font-size: 22px;
+            padding: 20px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Nacionalidade</h1>
-    <p>Digite abaixo seu pais</p>
-    <input type="text" name="paises" id="paises">
-    <input type="button" value="Enviar" onclick="enviado()">
-    <div id="resposta">
-        Nacionalidade
-    </div>
+    <main>
+        <h1>Nacionalidade</h1>
+        <p>Digite abaixo seu pais</p>
+        <input type="text" name="paises" id="paises">
+        <input type="button" value="Enviar" onclick="enviado()">
+        <div id="resposta">
+            Nacionalidade
+        </div>
+    </main>
 
     <script>
        function enviado(){
             var brasil = "BRASIL"
-            var pais = window.document.getElementById('paises') 
+            var pais = (window.document.getElementById('paises').value).toUpperCase()
+
             var res = window.document.getElementById('resposta')
-            res.innerText = (`Você é do ${pais}`)
+            res.innerHTML = (`Você é do ${pais}<br>`)
             if (pais != brasil){
-                res.innerText += ('Bem vindo ao Brasil')
+                res.innerText += ('Bem vindo ao Brasil!')
             }
 
             else{
-                res.innerText += ('Você é Brasileiro')
+                res.innerText += ('Bem vindo de volta ao lar!')
             }
        }
         
