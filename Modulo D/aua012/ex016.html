@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+</head>
+<body>
+    <main>
+        <h1 id="resposta"></h1>
+    </main>
+    <script>
+        var data = 0
+        //var data = new Date().getDay()
+        var resposta = window.document.getElementById('resposta')
+        switch(data){
+            case 0: 
+                resposta.innerHTML=(`Hoje é: Domingo`)
+                break
+            case 1: 
+                resposta.innerHTML=('Hoje é: Segunda')
+                break
+            case 2: 
+                resposta.innerHTML=('Hoje é: Terça')
+                break
+            case 3: 
+                resposta.innerHTML=('Hoje é: Quarta')
+                break
+            case 4: 
+                resposta.innerHTML=('Hoje é: Quinta')
+                break
+            case 5: 
+                resposta.innerHTML=('Hoje é: Sexta')
+                break
+            case 6: 
+                resposta.innerHTML=('Hoje é: Sábado')
+                break
+
+        }
+    </script>
+</body>
+</html>

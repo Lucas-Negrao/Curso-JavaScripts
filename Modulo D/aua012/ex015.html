@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+        body{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+
+        main{
+            background-color: lightslategrey;
+            height: 50vh;
+            width: 50vw;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            text-align: center;
+            
+        }
+        main>h1{
+            color: white;
+        }
+
+        main>div{
+            margin-top: 50px;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Bem vindo a hora exata</h1>
+        <p> Agora são exatamente:</p>
+        <div id="resposta">
+            horas
+        </div>
+    </main>
+
+    <script>
+        var horas = 18
+        //var horas = new Date().getHours()
+        var minutos = new Date().getMinutes()
+        var resposta = window.document.getElementById('resposta')
+        if (horas<6){
+            resposta.style.color = 'black'
+            resposta.innerHTML = (`${horas}:${minutos}<br> Boa madrugada!`)
+        }
+        else if (horas>=6 && horas<12){
+            resposta.style.color = '#FFFF00'
+            resposta.innerHTML=(`${horas}:${minutos}<br> Bom dia!`)
+        }
+        else if (horas>=12 && horas<18){
+            resposta.style.color = '#DAA520'
+            resposta.innerHTML = (`${horas}:${minutos}<br> Boa tarde!`)
+        }
+        else if (horas>=18 || horas<0){
+            resposta.style.color = '#000080'
+            resposta.innerHTML = (`${horas}:${minutos}<br> Boa noite!`)
+        }
+    </script>
+</body>
+</html>

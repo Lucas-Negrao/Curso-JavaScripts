@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        *{
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        main{
+            background-color: white;
+            height: 500px;
+            width: 500px;
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Sistema de votos</h1>
+        <p>Digite sua idade para saber qual a situação para seu voto</p>
+        idade: <input type="number" name="idade" id="idade">
+        <input type="button" value="Enviar" onclick="enviado()">
+        <div id="resposta">
+            Você tem:
+        </div>
+    </main>
+
+    <script>
+        function enviado(){
+            var anos = Number(window.document.getElementById('idade').value)
+            var resp = window.document.getElementById('resposta')
+            resp.innerHTML=(`Você tem <strong>${anos} anos</strong><br>`)
+            resp.style.color = 'blue'
+            if (anos<16){
+                resp.innerHTML+=(`Com ${anos} anos você não pode votar`)
+            }
+            else if (anos>=16 && anos < 18 || anos>=65){
+                resp.innerHTML+=(`Com ${anos} anos seu voto é opicional`)
+            }
+            else if (anos>=18){
+                resp.innerHTML+=(`Com ${anos} anos seu voto é <strong>obrigatório</strong>`)
+            }
+        }
+    </script>
+</body>
+</html>
