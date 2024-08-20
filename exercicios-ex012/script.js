@@ -4,23 +4,26 @@ function carregar(){
     //var hora = 18
     var hora = (new Date().getHours())
     var minutos = new Date().getMinutes()
-    mensagem.innerHTML = (`Agora são ${hora}:${minutos}`)
+    mensagem.innerHTML = (`Agora são ${hora}:${minutos}<br>`)
     if (hora<6){
         //Boa madrugada
         foto.src = 'imagens/madrugada-circulo.png'
         foto.style.width = '250px'
         document.body.style.background='  #151922'
+        mensagem.innerHTML+=('Boa madrugada!')
     }
     else if (hora>=6 && hora<12){
         //Bom dia
         foto.src = 'imagens/manha-circulo.png'
         foto.style.width = '250px'
         document.body.style.background='#FFE0A2'
+        innerHTML+=('Bom dia!')
     }
     else if (hora>=12 && hora<18){
         //Boa tarde
         foto.src = 'imagens/tarde-circulo.png'
         document.body.style.background='#F3A14B'
+        innerHTML+=('Boa tarde!')
         
     }
 
@@ -29,5 +32,6 @@ function carregar(){
         foto.src = 'imagens/noite-circulo.png'
         foto.style.width = '250px'
         document.body.style.background='#6A4C72'
+        mensagem.innerHTML+=('Boa noite!')
     }
 }
