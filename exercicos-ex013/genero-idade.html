@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é...</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Você</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>
+                Ano que você nasceu:
+                <input type="number" name="ano" id="txtano" placeholder="Nascimento">
+            </p>
+            <p>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="masculino" checked>
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="sexo" id="feminino">
+                
+                <p><input type="button" value="Enviar" onclick="enviado()"></p>
+            </p>
+        </div>
+        <div id="resposta">
+            dados
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Fim</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
