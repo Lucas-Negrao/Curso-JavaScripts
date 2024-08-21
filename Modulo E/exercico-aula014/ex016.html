@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Contagem</h1>
+    </header>
+    <section>
+        <div id="numeros">
+            <p>
+                <input type="number" name="inicio" id="inicio">
+                <label for="inicio">Inicia</label>
+            </p>
+            <p>
+                <input type="number" name="fim" id="fim">
+                <label for="fim">Termina</label>
+            </p>
+            <p>
+                <input type="number" name="pulando" id="pulando">
+                <label for="pulando">Pulando</label>
+            </p>
+            <p> <input type="button" value="Contar" onclick="conte()"></p>
+
+        </div>
+
+        <div id="resposta">
+            
+        </div>
+    </section>
+    <footer></footer>
+
+    <script src="contagem.js"></script>
+</body>
+</html>
