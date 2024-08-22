@@ -5,6 +5,7 @@ function tabuada(){
 
     if(numero=='' || multiplicador == ''){
         window.alert('[ERRO] Algum número não foi informado')
+        seletor.innerHTML=''
     }
     else{
         var c =1
