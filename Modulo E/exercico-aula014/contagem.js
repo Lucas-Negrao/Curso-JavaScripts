@@ -1,4 +1,4 @@
-function conte(){
+    function conte(){
     var inicio = Number(document.getElementById('inicio').value)
     var fim = Number(document.getElementById('fim').value)
     var pulando = Number(document.getElementById('pulando').value)
