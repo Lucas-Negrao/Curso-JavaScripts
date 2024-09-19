@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: lightsteelblue;
+}
+
+h1, p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+div#conteudo{
+    padding: 18px;
+    background-color: white;
+    margin: auto;
+    width: 500px;
+    border-radius: 8px
+}
+
+input{
+    padding: 5px;
+}
+
+input#inumero{
+    width: 200px;
+}
+
+
+select{
+    width: 30%;
+}
+
+footer{
+    text-align: center;
+    margin-top: 5px;
+}
